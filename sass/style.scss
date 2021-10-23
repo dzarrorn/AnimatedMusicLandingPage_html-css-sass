@@ -1,0 +1,128 @@
+$green: #92e3a9;
+$black: #455a64;
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Nunito:wght@200;300;400;600;700&display=swap");
+
+* {
+  font-family: "Exo 2";
+  font-style: italic;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background: #f7f7f7;
+}
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  padding: 3rem;
+  .logo {
+    h1 {
+      height: 3rem;
+      color: $green;
+    }
+  }
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      li {
+        margin: 0 3.6rem;
+        a {
+          font-size: 2rem;
+          text-decoration: none;
+          color: $black;
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .image {
+    margin-top: -5rem;
+    img {
+      width: 40vw;
+    }
+  }
+  .content {
+    margin-top: 13rem;
+    width: 40vw;
+    animation: animate 1s ease 1;
+    h1 {
+      font-size: 5rem;
+      color: $black;
+    }
+    h3 {
+      font-size: 2.3rem;
+      color: $green;
+      margin: 1rem 0;
+    }
+    p {
+      font-size: 1.3rem;
+      color: $black;
+    }
+    .buttons {
+      button {
+        background: $green;
+        height: 4rem;
+        width: 14rem;
+        color: $black;
+        border-radius: 5rem;
+        outline: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin: 2rem 0;
+        border: none;
+        &:hover {
+          background: $black;
+          color: $green;
+        }
+      }
+      a:nth-child(2) button {
+        margin-left: 2rem;
+      }
+    }
+    .icons {
+      width: 15rem;
+      display: flex;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        color: $black;
+        font-size: 2.7rem;
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+}
+@keyframes animate {
+  0% {
+    transform: translateY(5rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
